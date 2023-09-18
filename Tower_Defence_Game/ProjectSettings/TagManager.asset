@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - Enemy
+  - Projecttiles
+  - EndPoint
   layers:
   - Default
   - TransparentFX
@@ -40,4 +44,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackGround
+    uniqueID: 575893881
+    locked: 0
+  - name: ForBackGround
+    uniqueID: 4181494371
+    locked: 0
+  - name: EnemyLayer
+    uniqueID: 3200124901
+    locked: 0
+  - name: ProjectTiles
+    uniqueID: 3676891237
     locked: 0
