@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f7fe97f49e69a64da60feb3313fbd8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arrow_01: {fileID: 327678338095677786, guid: 4c193172471d8d44ca3019f706e0b19a, type: 3}
+  ProjectTile: {fileID: 327678338095677786, guid: 4c193172471d8d44ca3019f706e0b19a, type: 3}
   distance: 3
   arrowSpeed: 3
   dirRot: 0

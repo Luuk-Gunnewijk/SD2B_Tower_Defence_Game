@@ -57,3 +57,6 @@ TagManager:
   - name: ProjectTiles
     uniqueID: 3676891237
     locked: 0
+  - name: Effects
+    uniqueID: 1200106815
+    locked: 0

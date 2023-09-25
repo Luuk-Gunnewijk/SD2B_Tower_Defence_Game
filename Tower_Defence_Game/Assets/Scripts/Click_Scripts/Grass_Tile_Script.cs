@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Grass_Tile_Script : MonoBehaviour
 {
     Tower_Place_UI_Script myTower_Place_UI_Script;
 
     public GameObject tower_01_Prefab;
+    public GameObject tower_02_Prefab;
+    public GameObject tower_03_Prefab;
 
     Transform grassTile;
 
@@ -22,12 +25,29 @@ public class Grass_Tile_Script : MonoBehaviour
 
     void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject()) return;
         myTower_Place_UI_Script.OpenTowerUI(this);
     }
 
     public void PlaceTower_01() 
     {
         GameObject tower = Instantiate(tower_01_Prefab, grassTile);
+        tower.transform.position = transform.position;
+
+        myTower_Place_UI_Script.QuitButton();
+    }
+
+    public void PlaceTower_02()
+    {
+        GameObject tower = Instantiate(tower_02_Prefab, grassTile);
+        tower.transform.position = transform.position;
+
+        myTower_Place_UI_Script.QuitButton();
+    }
+
+    public void PlaceTower_03()
+    {
+        GameObject tower = Instantiate(tower_03_Prefab, grassTile);
         tower.transform.position = transform.position;
 
         myTower_Place_UI_Script.QuitButton();

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2315600181285675528}
   - component: {fileID: 2315600181285675531}
   - component: {fileID: 735180748323393684}
-  - component: {fileID: 7094576727377674019}
   - component: {fileID: -2711757738627895484}
   - component: {fileID: 3106494609429485883}
   m_Layer: 0
@@ -125,18 +124,10 @@ MonoBehaviour:
   Health: 0
   damage: 0
   moveSpeed: 0
---- !u!114 &7094576727377674019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2315600181285675530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bcf8139c342d874a9380e4a9c89324a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  amountMoneyDrop: 0
+  WhiteMat: {fileID: 2100000, guid: 9c01cdda91618214d956b50870d71ed5, type: 2}
+  defaultMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  coins: {fileID: 4926592188595390173, guid: f40238209f6b3294f92be45f2b98861e, type: 3}
 --- !u!50 &-2711757738627895484
 Rigidbody2D:
   serializedVersion: 4

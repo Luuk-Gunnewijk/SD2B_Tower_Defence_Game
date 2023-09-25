@@ -5,10 +5,12 @@ using Unity.Mathematics;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
-public class Tower_01_Script : MonoBehaviour
+public class Towers_Script : MonoBehaviour
 {
+    
+
     Transform enemy;
-    public GameObject Arrow_01;
+    public GameObject ProjectTile;
 
     [SerializeField] float distance;
     [SerializeField] float arrowSpeed;
@@ -33,12 +35,12 @@ public class Tower_01_Script : MonoBehaviour
         if (dir.magnitude > distance) { return; }
         if (Physics2D.Raycast(transform.position, dir, distance))
         {
-            Debug.Log("Something hit");
+            //Debug.Log("Something hit");
             Debug.DrawRay(transform.position, dir, Color.red, 1);
             if(canSpawnNextArrow == true) 
             {
-                var arrow = Instantiate(Arrow_01, transform.position, Quaternion.FromToRotation(Vector2.up, dir));
-                StartCoroutine(SpawnNextArrow());
+                var arrow = Instantiate(ProjectTile, transform.position, Quaternion.FromToRotation(Vector2.up, dir));
+                StartCoroutine(SpawnNextProjectTile());
                 arrow.GetComponent<Rigidbody2D>().velocity = dir * arrowSpeed;
                 Destroy(arrow, 5f);
             }       
@@ -46,7 +48,7 @@ public class Tower_01_Script : MonoBehaviour
         //(Physics2D.CircleCast(transform.position, 1, Vector2.one, distance))
     }
 
-    IEnumerator SpawnNextArrow() 
+    IEnumerator SpawnNextProjectTile() 
     {
         canSpawnNextArrow = false;
         yield return new WaitForSeconds(1);
