@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Scripting.APIUpdating;
+using UnityEngine.UI;
 
 public class Coin_Script : MonoBehaviour
 {
+
     void Update()
     {
         MoveCoinToTopRight();

@@ -33,14 +33,7 @@ public class Main_Enemy_Script : MonoBehaviour
 
     void Update()
     {
-        MoveToTheRightTest();
-
         EnemyHasDied();;
-    }
-
-    void MoveToTheRightTest()
-    {
-        transform.position += new Vector3(moveSpeed, 0, 0) * Time.deltaTime;
     }
 
     void EnemyHasDied() 

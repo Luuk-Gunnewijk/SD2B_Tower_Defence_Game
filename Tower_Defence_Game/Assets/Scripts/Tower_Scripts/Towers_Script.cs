@@ -7,8 +7,6 @@ using UnityEngine;
 
 public class Towers_Script : MonoBehaviour
 {
-    
-
     Transform enemy;
     public GameObject ProjectTile;
 
@@ -21,15 +19,18 @@ public class Towers_Script : MonoBehaviour
 
     void Start()
     {
-        enemy = GameObject.Find("Viking_01").transform;
+        //enemy = GameObject.Find("Viking_01").transform; 
     }
 
     void Update()
     {
-        RayCast();
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        enemy = enemies[0].transform;
+
+        ShootProjectTiles();
     }
 
-    public void RayCast() 
+    public void ShootProjectTiles() 
     {
         Vector3 dir = enemy.position - transform.position;
         if (dir.magnitude > distance) { return; }
@@ -42,8 +43,9 @@ public class Towers_Script : MonoBehaviour
                 var arrow = Instantiate(ProjectTile, transform.position, Quaternion.FromToRotation(Vector2.up, dir));
                 StartCoroutine(SpawnNextProjectTile());
                 arrow.GetComponent<Rigidbody2D>().velocity = dir * arrowSpeed;
+                if (dir == null) { Destroy(arrow, 1f); }
                 Destroy(arrow, 5f);
-            }       
+            }
         }
         //(Physics2D.CircleCast(transform.position, 1, Vector2.one, distance))
     }

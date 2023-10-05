@@ -81,7 +81,7 @@ public class Tower_Place_UI_Script : MonoBehaviour
     {
         if (towerUIIsOpen == true)
         {
-            if (costOfTower_02 <= myMain_Economy_Script.money)
+            if (costOfTower_03 <= myMain_Economy_Script.money)
             {
                 currentClickedGrassTileScript.PlaceTower_03();
                 myMain_Economy_Script.money -= costOfTower_03;

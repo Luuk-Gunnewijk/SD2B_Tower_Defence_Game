@@ -13,7 +13,7 @@ public class Main_Economy_Script : MonoBehaviour
     private void Update()
     {
         myMoneyScore.text = money.ToString();
-        Debug.Log(money + " my current Monney");
+        //Debug.Log(money + " my current Monney");
     }
 
     public void GainXAmountOfMoney(int GainMoney)

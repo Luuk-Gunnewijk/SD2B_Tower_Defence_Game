@@ -17,7 +17,14 @@ public class Pauze_Menu_Script : MonoBehaviour
         {
             myPauzeCanvas.enabled = !myPauzeCanvas.enabled;
         }
-        
+        if(myPauzeCanvas.enabled == true) 
+        {
+            Time.timeScale = 0;
+        }
+        else
+        {
+            Time.timeScale = 1;
+        }
     }
 
     public void ResumeGame()
