@@ -12,6 +12,7 @@ public class Towers_Script : MonoBehaviour
 
     [SerializeField] float distance;
     [SerializeField] float arrowSpeed;
+    [SerializeField] public int projecttileDamage;
 
     public float dirRot;
 
@@ -24,16 +25,17 @@ public class Towers_Script : MonoBehaviour
 
     void Update()
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        enemy = enemies[0].transform;
-
+        FindCorrectEnemy();
         ShootProjectTiles();
     }
 
     public void ShootProjectTiles() 
     {
+        if (!enemy)
+        {
+            return;
+        }
         Vector3 dir = enemy.position - transform.position;
-        if (dir.magnitude > distance) { return; }
         if (Physics2D.Raycast(transform.position, dir, distance))
         {
             //Debug.Log("Something hit");
@@ -42,7 +44,7 @@ public class Towers_Script : MonoBehaviour
             {
                 var arrow = Instantiate(ProjectTile, transform.position, Quaternion.FromToRotation(Vector2.up, dir));
                 StartCoroutine(SpawnNextProjectTile());
-                arrow.GetComponent<Rigidbody2D>().velocity = dir * arrowSpeed;
+                arrow.GetComponent<Rigidbody2D>().velocity = dir.normalized * arrowSpeed;
                 if (dir == null) { Destroy(arrow, 1f); }
                 Destroy(arrow, 5f);
             }
@@ -55,5 +57,31 @@ public class Towers_Script : MonoBehaviour
         canSpawnNextArrow = false;
         yield return new WaitForSeconds(1);
         canSpawnNextArrow = true;
+    }
+
+    bool IsEnemyInRange(Transform enemyTransform)
+    {
+        Vector3 dir = enemyTransform.position - transform.position;
+        return dir.magnitude < distance;
+    }
+
+    void FindCorrectEnemy()
+    {
+
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        int closestPathFindingIndex = -1;
+        for (int i = 0; i < enemies.Length; i++)
+        {
+            if (!IsEnemyInRange(enemies[i].transform))
+            {
+                continue;
+            }
+            int index = enemies[i].GetComponent<PathFinding_Script>().GetCurrentNodeIndex();
+            if (index > closestPathFindingIndex)
+            {
+                enemy = enemies[i].transform;
+                closestPathFindingIndex = index;
+            }
+        }
     }
 }

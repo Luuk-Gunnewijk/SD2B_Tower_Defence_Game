@@ -53,4 +53,9 @@ public class PathFinding_Script : MonoBehaviour
         yield return new WaitForSeconds(spawnNextParticleTime);
         canSpawnParticle = true;
     }
+
+    public int GetCurrentNodeIndex()
+    {
+        return currentNodeIndex;
+    }
 }

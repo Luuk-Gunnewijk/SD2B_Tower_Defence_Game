@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3106494609429485883}
   - component: {fileID: -8982557803784129055}
   m_Layer: 0
-  m_Name: Viking_01
+  m_Name: Crow_01
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: -1094842395
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1274641071, guid: fd7eb94f95d9c474b9937a4e5e3dac79, type: 3}
+  m_Sprite: {fileID: -1399977148, guid: adc6868ae06b26343aee9c6965c17306, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +99,7 @@ Animator:
   m_GameObject: {fileID: 2315600181285675530}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c239166dae35a7f4c80d7743d47d1f49, type: 2}
+  m_Controller: {fileID: 9100000, guid: 57ba455951ba7a84394e6773b666d1b6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -122,9 +122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b27b05382a3f2e46a7d51b7c553dcf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 3
+  Health: 2
   damage: 1
-  amountMoneyDrop: 25
+  amountMoneyDrop: 50
   WhiteMat: {fileID: 2100000, guid: 9c01cdda91618214d956b50870d71ed5, type: 2}
   defaultMat: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   coins: {fileID: 4926592188595390173, guid: f40238209f6b3294f92be45f2b98861e, type: 3}
@@ -178,5 +178,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pathObjects: []
-  moveSpeed: 0.5
-  dustParticle: {fileID: 2510239142122920697, guid: 47731b519bccd4f4b97f4ebca9985f9a, type: 3}
+  moveSpeed: 1
+  dustParticle: {fileID: 0}

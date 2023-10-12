@@ -8,13 +8,13 @@ public class Main_Enemy_Script : MonoBehaviour
 {
     Lost_Script myLost_Script;
     Main_Economy_Script myMain_Economy_Script;
+    Towers_Script myTower_Script;
     SpriteRenderer mySpriteRenderer;
 
     //[Tooltip("This is the status from the enemies")]
     [Header("Enemey status")]
     [SerializeField] int Health;
     [SerializeField] int damage;
-    [SerializeField] float moveSpeed;
     [SerializeField] int amountMoneyDrop;
 
     [Header("Enemy objects")]
@@ -28,7 +28,8 @@ public class Main_Enemy_Script : MonoBehaviour
     {
         myMain_Economy_Script = FindAnyObjectByType<Main_Economy_Script>(); 
         mySpriteRenderer = GetComponent<SpriteRenderer>();
-        myLost_Script = FindAnyObjectByType<Lost_Script>();   
+        myLost_Script = FindAnyObjectByType<Lost_Script>();
+        myTower_Script = FindAnyObjectByType<Towers_Script>();
     }
 
     void Update()
@@ -56,6 +57,7 @@ public class Main_Enemy_Script : MonoBehaviour
 
         if (other.gameObject.tag == "Projecttiles")
         {
+            //myTower_Script.projecttileDamage -= Health; fix This!!!
             Health--;
             StartCoroutine(DamageSpriteRoutine());
         }

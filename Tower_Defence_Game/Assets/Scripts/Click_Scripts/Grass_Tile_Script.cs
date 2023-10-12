@@ -30,6 +30,7 @@ public class Grass_Tile_Script : MonoBehaviour
     {
         if (EventSystem.current.IsPointerOverGameObject()) return;
         myTower_Place_UI_Script.OpenTowerUI(this);
+        
     }
 
     void OnMouseOver()

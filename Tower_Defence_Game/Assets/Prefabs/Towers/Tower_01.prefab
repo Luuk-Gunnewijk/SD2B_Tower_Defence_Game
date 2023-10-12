@@ -100,4 +100,5 @@ MonoBehaviour:
   ProjectTile: {fileID: 327678338095677786, guid: 4c193172471d8d44ca3019f706e0b19a, type: 3}
   distance: 3
   arrowSpeed: 3
+  projecttileDamage: 1
   dirRot: 0

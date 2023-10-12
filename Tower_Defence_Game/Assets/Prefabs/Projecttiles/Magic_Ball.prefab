@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5243293368400272844}
   - component: {fileID: 2909520708144985310}
   m_Layer: 0
-  m_Name: FireBall
+  m_Name: Magic_Ball
   m_TagString: Projecttiles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2201544839531577569}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2428658207804658839}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: -618076059
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c5db2679e4caf034b98c5ff5a9d3d6dd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0809027b2cd8ac54eb03052af68ff5b3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -149,7 +149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6518412504807658243}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.041, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -206,8 +206,8 @@ TrailRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.032539368
-        value: 0.13432503
+        time: 0.026031777
+        value: 0.09701387
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -228,8 +228,8 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.5660378, g: 0, b: 0, a: 0.78431374}
-      key1: {r: 0.4716981, g: 0.093845695, b: 0, a: 0.78431374}
+      key0: {r: 0.21567464, g: 0.0034116306, b: 0.21698111, a: 1}
+      key1: {r: 0.58431375, g: 0, b: 0.42895856, a: 1}
       key2: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 0.19607843}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -245,7 +245,7 @@ TrailRenderer:
       ctime6: 0
       ctime7: 0
       atime0: 0
-      atime1: 57632
+      atime1: 48380
       atime2: 65535
       atime3: 0
       atime4: 0

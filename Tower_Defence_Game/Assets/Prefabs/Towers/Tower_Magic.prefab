@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9046692212208907697}
   - component: {fileID: 451548279497457724}
   m_Layer: 0
-  m_Name: Place_Holder_Tower
+  m_Name: Tower_Magic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: -113472925
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b2f4898ead5d8254b97f404169621216, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b2e446f4b1aa1474bb0b6513dd3a4d0c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ProjectTile: {fileID: 2201544839531577569, guid: f41a408b756201041b6383c6e5094a9b, type: 3}
-  distance: 5
-  arrowSpeed: 3
+  distance: 4
+  arrowSpeed: 2
+  projecttileDamage: 2
   dirRot: 0
