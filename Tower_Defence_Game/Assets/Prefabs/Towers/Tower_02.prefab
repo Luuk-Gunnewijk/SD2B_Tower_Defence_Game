@@ -99,6 +99,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectTile: {fileID: 4658005787373865816, guid: b88a4127858068b48a3b8df139495855, type: 3}
   distance: 2
-  arrowSpeed: 5
-  projecttileDamage: 1
-  dirRot: 0
+  arrowSpeed: 3
+  projecttileDamage: 3
+  spawnNextProjectTile: 2

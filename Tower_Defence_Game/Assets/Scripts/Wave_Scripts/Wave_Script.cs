@@ -10,10 +10,13 @@ public class Wave_Script : MonoBehaviour
     [SerializeField] int SpawnNextEnemyTime;
 
     int currentEnemy = 0;
-    bool canSpawnNextEnemy;
+    bool canSpawnNextEnemy, isDefeated;
+    AudioSource hornSound;
 
     private void Start()
     {
+        hornSound = GetComponent<AudioSource>();
+        hornSound.Play();
         canSpawnNextEnemy = true;
 
         foreach (var enemy in enemies) 
@@ -32,9 +35,10 @@ public class Wave_Script : MonoBehaviour
             StartCoroutine(StartNextEnemyRoutine());
         }
         
-        if (enemies.All(e => e == null) )
+        if (enemies.All(e => e == null) && !isDefeated )
         {
             GlobalData.waveIsDefeated = true;
+            isDefeated = true;
         }
     }
 

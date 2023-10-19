@@ -13,15 +13,11 @@ public class Towers_Script : MonoBehaviour
     [SerializeField] float distance;
     [SerializeField] float arrowSpeed;
     [SerializeField] public int projecttileDamage;
+    [SerializeField] float spawnNextProjectTile;
 
-    public float dirRot;
+    float dirRot;
 
     bool canSpawnNextArrow = true;
-
-    void Start()
-    {
-        //enemy = GameObject.Find("Viking_01").transform; 
-    }
 
     void Update()
     {
@@ -44,6 +40,7 @@ public class Towers_Script : MonoBehaviour
             {
                 var arrow = Instantiate(ProjectTile, transform.position, Quaternion.FromToRotation(Vector2.up, dir));
                 StartCoroutine(SpawnNextProjectTile());
+                arrow.GetComponent<Projectile_Script>().towerScript = this;
                 arrow.GetComponent<Rigidbody2D>().velocity = dir.normalized * arrowSpeed;
                 if (dir == null) { Destroy(arrow, 1f); }
                 Destroy(arrow, 5f);
@@ -55,7 +52,7 @@ public class Towers_Script : MonoBehaviour
     IEnumerator SpawnNextProjectTile() 
     {
         canSpawnNextArrow = false;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(spawnNextProjectTile);
         canSpawnNextArrow = true;
     }
 
