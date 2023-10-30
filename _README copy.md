@@ -2,11 +2,12 @@ Viking and Towers is een Tower Defence game waar jij de torens plaast om de viki
 je plaast de torens met het geld wat je hebt om meer geld te krijgen moet je de vikings vernietigen. De vikings zullen niet alleen op land komen maar ook via de riviers.
 
 ![First Pic](TowerDefence_Pics/Pic_01.png)
+![Second Pic](TowerDefence_Pics/Pic_02.png)
 
 ## Product 1: "DRY SRP Scripts op GitHub"
 
 
-
+[Wave_Script](Tower_Defence_Game/Assets/Scripts/Wave_Scripts/Wave_Script.cs)
 [link naar script](/MyTowerDefenseGame/Assets/Scripts/JustAScript.cs)"*
 
 ## Product 2: "Projectmappen op GitHub"
