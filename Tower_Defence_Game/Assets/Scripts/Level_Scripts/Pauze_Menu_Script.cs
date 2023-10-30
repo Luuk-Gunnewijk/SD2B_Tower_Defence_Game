@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Pauze_Menu_Script : MonoBehaviour
 {
@@ -30,5 +31,10 @@ public class Pauze_Menu_Script : MonoBehaviour
     public void ResumeGame()
     {
         myPauzeCanvas.enabled = false;
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("Main_Menu");
     }
 }
