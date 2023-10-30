@@ -28,3 +28,4 @@ Voor het wave systeem wou ik twee objecten gebruiken waar de code in zit. in de 
 
 Voor het project afmaken was het belangrijk om te kijken of er nog bugs waren die moesten woorden op gelost. daarna was het tijd om meer levels temaken. al die levels werden ook geplay test.
 nu nog moest de game nog gebuild worden.
+
