@@ -6,17 +6,16 @@ je plaast de torens met het geld wat je hebt om meer geld te krijgen moet je de 
 
 ## Product 1: "DRY SRP Scripts op GitHub"
 
-
+in het wave script werk ik met SRP
 [Wave_Script](Tower_Defence_Game/Assets/Scripts/Wave_Scripts/Wave_Script.cs)
-[link naar script](/MyTowerDefenseGame/Assets/Scripts/JustAScript.cs)"*
+
+in de Tower Script werk ik met DRY
+[Tower-Script](Tower_Defence_Game/Assets/Scripts/Tower_Scripts/Towers_Script.cs)
 
 ## Product 2: "Projectmappen op GitHub"
 
-Je commit de mappenstructuur van je unity project op github en verwijst vanuit je readme naar de root map van je project. Met een netjes en goed gestructureerde mappenstructuur en benamingen van files toon je aan dat je dit leerdoel beheerst. 
-
-Dit is de [ROOT](/MyTowerDefenseGame/) folder van mijn unity project.
-
-Zorg dat deze verwijst naar je Develop branch.
+dit zijn alle mappen die gerbuik in mijn unity voor dit project. Alles is goed neer gezet zodat het duidelijk is waar alles is
+[Project Mappen](Tower_Defence_Game/Assets)
 
 ## Product 3: Build op Github
 
