@@ -19,31 +19,37 @@ dit zijn alle mappen die gerbuik in mijn unity voor dit project. Alles is goed n
 
 ## Product 3: Build op Github
 
-Je maakt in Unity een stabiele “build” van je game waarbij bugs en logs eerst zijn verwijderd. Deze buildfiles upload je in je repository onder releases.  Bij eventuele afwijkingen moeten deze worden gedocumenteerd in de release. (Bijv controller nodig of spelen via netwerk etc..) 
-
-[Release Voorbeeld](https://github.com/erwinhenraat/TowerDefenseTemplate/releases)
+[Vikings And Towers Realse](https://github.com/Luuk-Gunnewijk/SD2B_Tower_Defence_Game/releases/tag/1.0)
 
 ## Product 4: Game met Sprites(animations) en Textures 
 
-De build van je game bevat textures, sprites en sprite animations(bijv particles) die op de juiste manier zijn gebruikt en zorgen voor een goede afwerking van je game.  
+voor mijn game heb ik alle sprites zelf gemaakt in aseprite en allemaal in unity gezet. voor animaties heb ik sprite sheets gebruikt en voor de single foto's heb ik een sprite gebruikt. ik heb ook een texture zodra de enemies damage nemen.
 
-Plaats in je readme een animated gif van je gameplay (+- 10 sec.) waarin de implementatie van je textures en sprites goed te zien is.
-
-![Textures Sprites](readmeVisuals/texturesSprites.gif)
+![Pic_03](TowerDefence_Pics/Pic_03.png)
+![Pic_04](TowerDefence_Pics/Pic_04.png)
+[Texture](Tower_Defence_Game/Assets/Graphics/Materials/WhiteMat.mat)
 
 ## Product 5: Issues met debug screenshots op GitHub 
 
-Zodra je bugs tegenkomt maak je een issue aan op github. In de issue omschrijf je het probleem en je gaat proberen via breakpoints te achterhalen wat het probleem is. Je maakt screenshot(s) van het debuggen op het moment dat je via de debugger console ziet wat er mis is. Deze screenshots met daarbij uitleg over het probleem en de bijhorende oplossing post je in het bijhorende github issue. 
-[Hier de link naar mijn issues](https://github.com/erwinhenraat/TowerDefenseTemplate/issues/)
+er zijn verschillende manieren om te debugen. 
+
+Als voorbeeld:
+
+in dit script zie je dat ik bijvoorbeeld debug.log gebruik.
+[Main Economy_Script](Tower_Defence_Game/Assets/Scripts/Economy_Scripts/Main_Economy_Script.cs)
+
+ik heb ook draw raycast gerbuikt ook een manier van debugen.
+daarmee kon ik makkelijk zien waar de toren naar aan het richten is.
+
+
+je kan ook manieren gebruiken om de code te stoppen en daar de coden te open om te kijken wat daar gebeurd.
 
 ## Product 6: Game design met onderbouwing 
 
-Je gebruikt een game design tool om je game design vast te leggen en te communiceren. Daarnaast onderbouw je de design keuzes ten aanzien van “playability” en “replayability” voor je game schriftelijk. 
+als eerst heb ik een one page gemaakt
+[onePage](https://app.milanote.com/1QEZGp1tOjdeaP/one-page)
 
-Voorbeeld van een one page design:
-![](https://external-preview.redd.it/48mnMpA0TbiihGo4HsJiWrJhK72xeTRwV2o70_AKilw.jpg?auto=webp&s=3a1ae18f0e4fba7a465643987cbe9cf409466e53)
-
-Omschrijf per mechanic welke game design keuzes je hebt gemaakt en waarom je dit hebt gedaan.
+ik heb ook zelf bedacht van tevoren hoe ik wil dat de game voelt de twee belangrijkste doelen waren om te zorgen dat de stratigichs begint en daarna chaotich word.
 
 *  **Je game bevat torens die kunnen mikken en schieten op een bewegend doel.** 
 
