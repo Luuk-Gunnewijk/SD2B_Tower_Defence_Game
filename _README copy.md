@@ -1,143 +1,31 @@
-Viking and Towers is een Tower Defence game waar jij de torens plaast om de vikings tegen te houden van het binnen komen in je fort.
-je plaast de torens met het geld wat je hebt om meer geld te krijgen moet je de vikings vernietigen. De vikings zullen niet alleen op land komen maar ook via de riviers.
+# SD2B_Tower_Defence_Game
 
-![First Pic](TowerDefence_Pics/Pic_01.png)
-![Second Pic](TowerDefence_Pics/Pic_02.png)
+                      :Onderzoek:
 
-## Product 1: "DRY SRP Scripts op GitHub"
+Ik heb Kingdom rush gespeelt en tactical war. het groote verschil tussen die games was dat in kingdom rush terwel de waves bezig waren ben je ook dingen aan het doen. in de andere game wat ik heel gaaf vond is dat je de terrein kapot kon maken en daar weer dingen kon plaatsen. het is fijn om te weten vantevoren welke vijanden je gaat zien de komende wave.
 
-in het wave script werk ik met SRP
-[Wave_Script](Tower_Defence_Game/Assets/Scripts/Wave_Scripts/Wave_Script.cs)
+                        :Tower Systeem en Vijanden Systeem:
 
-in de Tower Script werk ik met DRY
-[Tower-Script](Tower_Defence_Game/Assets/Scripts/Tower_Scripts/Towers_Script.cs)
+Met het tower systeem wou ik dat de torens altijd richten op de vijand die het meest dichtbijst is van het doel en ook dat je in de range bent van de toren. de toren heeft nu een raycast die richt op de vijanden er worden op pijlen geschoten die damage doen op de vijand. de vijanden kunnen meer of minder health hebben wanneer ze spawnen ook kun je hun damage instellen en hun snelheid. je kan nu ook verliezen als de vijanden teveel damage hebben gedaan.
 
-## Product 2: "Projectmappen op GitHub"
+                        :Economy Sytseem:
 
-dit zijn alle mappen die gerbuik in mijn unity voor dit project. Alles is goed neer gezet zodat het duidelijk is waar alles is
-[Project Mappen](Tower_Defence_Game/Assets)
+Met het Economy Systeem heb je geld ook voor elk level heb je starting geld. als je vijanden verslaad dan krijg je meer geld. het geld heb je nodig om je toren te kunnen plaasten. ik wil later ook er voor zorgen dat je je torens kan updgraden
 
-## Product 3: Build op Github
+                        :Main Menu en updates:
 
-[Vikings And Towers Realse](https://github.com/Luuk-Gunnewijk/SD2B_Tower_Defence_Game/releases/tag/1.0)
+het main menu heb ik gemaakt met een level manger de enige manger die ik wil hebben in de tower defence game. voor de naam van de game wacht ik nog even. ik hebn ook een pauze menu gemaakt waarmee je terug kan naar het menu.
 
-## Product 4: Game met Sprites(animations) en Textures 
+                        :PathFinding:
 
-voor mijn game heb ik alle sprites zelf gemaakt in aseprite en allemaal in unity gezet. voor animaties heb ik sprite sheets gebruikt en voor de single foto's heb ik een sprite gebruikt. ik heb ook een texture zodra de enemies damage nemen.
+het pathfinding maken was makkelijker dan ik dacht ik heb van tevoren goed uitgeplant hoe ik de pathfinding kan maken. de path finding is zo genmaakt dat je je eiegen paden kan maken als developer. dus ik kan meerde paden maken in alle levels. en ik kan verschillende enemies gebruiken om op andere plaasten te gaan lopen.
 
-![Pic_03](TowerDefence_Pics/Pic_03.png)
-![Pic_04](TowerDefence_Pics/Pic_04.png)
-[Texture](Tower_Defence_Game/Assets/Graphics/Materials/WhiteMat.mat)
+                        :Wave Systeem:
 
-## Product 5: Issues met debug screenshots op GitHub 
+Voor het wave systeem wou ik twee objecten gebruiken waar de code in zit. in de eerste eentje waar de waves in opsla en de volgende wave start wanneer de current wave klaar is. in het tweede object de wave zelf met alle enemies en hoe snel hun spawnen achter elkaar.
 
-er zijn verschillende manieren om te debugen. 
+                        :Project afmaken:
 
-Als voorbeeld:
+Voor het project afmaken was het belangrijk om te kijken of er nog bugs waren die moesten woorden op gelost. daarna was het tijd om meer levels temaken. al die levels werden ook geplay test.
+nu nog moest de game nog gebuild worden.
 
-in dit script zie je dat ik bijvoorbeeld debug.log gebruik.
-[Main Economy_Script](Tower_Defence_Game/Assets/Scripts/Economy_Scripts/Main_Economy_Script.cs)
-
-ik heb ook draw raycast gerbuikt ook een manier van debugen.
-daarmee kon ik makkelijk zien waar de toren naar aan het richten is.
-
-
-je kan ook manieren gebruiken om de code te stoppen en daar de coden te open om te kijken wat daar gebeurd.
-
-## Product 6: Game design met onderbouwing 
-
-als eerst heb ik een one page gemaakt
-[onePage](https://app.milanote.com/1QEZGp1tOjdeaP/one-page)
-
-ik heb ook zelf bedacht van tevoren hoe ik wil dat de game voelt de twee belangrijkste doelen waren om te zorgen dat de stratigichs begint en daarna chaotich word.
-
-*  **Je game bevat torens die kunnen mikken en schieten op een bewegend doel.** 
-
-*Mijn torens hebben ook nog een f.o.v waardoor je pas gaan mikken als enemies in de buurt zijn. ook hebben mijn torens geen 360 graden view maar 90 graden waardoor het een extra uitdaging is voor de speler om de torens ook op de meest tactische manier te roteren.*
-
-*  **Je game bevat vernietigbare vijanden die 1 of meerderen paden kunnen volgen.**  
-
-*Mijn enemies bevatten 3 types: 
-1 snelle die ook snel dood gaat. echter als er veel snelle enemies zijn is de kans steeds groter dat ze bij hun doel komen omdat de torens maar 1 enemy tegelijk kan targetten. Het forceert de speler dus om veel goedkope torens te plaatsen.
-Ook is er een langzame gepantserde enemy. Deze kan eigenlijk alleen maar worden vernietigd door magische torens die zijn geupgrade. goedkope torens doen bijna geen schade. De speler moet dus een balans gaan zoeken tussen veel goedkope torens en upgraden van torens.
-Tot slot is er een vijand die andere enemies healt dit zorgt ervoor dat de speler een extra nadeel heeft en de torens handmatig de deze healer moet laten targetten hierdoor wordt de speler gedwongen om actiever de game te spelen omdat anders geen enkele enemy meer dood gaat.*
-
-*  **Je game bevat een “wave” systeem waarmee er onder bepaalde voorwaarden (tijd/vijanden op) nieuwe waves met vijanden het veld in komen.**
-
-*Onderbouwing hier...*
-
-*  **Een “health” systeem waarmee je levens kunt verliezen als vijanden hun doel bereiken en zodoende het spel kunt verliezen.** 
-
-*Onderbouwing hier...*
-
-*  **Een “resource” systeem waarmee je resources kunt verdienen waarmee je torens kunt kopen en .evt upgraden.**
-
-*Onderbouwing hier...*
-
-*  **Een “upgrade” systeem om je torens te verbeteren.**
-
-*Onderbouwing hier...*
-
-*  **Een “movement prediction” systeem waarmee je kan berekenen waar een toren heen moeten schieten om een bewegend object te kunnen raken. (Moeilijk)**
-
-*Onderbouwing hier...*
-
-## Product 7: Class Diagram voor volledige codebase 
-
-Je brengt je volledige codebase in kaart met behulp van een class diagram. Binnen de classes hoeven geen private members te worden weergegeven. Wel alle public members (fields en methods). Ook geef je indien relevant de relaties tussen je classes weer. Je class diagram plaats je in je readme op github. Evt mag je dit doen m.b.v de [“Mermaid”](https://mermaid.js.org/syntax/classDiagram.html) tool.
-
-
-```mermaid
----
-title: Animal example
----
-classDiagram
-    note "From Duck till Zebra"
-    Animal <|-- Duck
-    note for Duck "can fly\ncan swim\ncan dive\ncan help in debugging"
-    Animal <|-- Fish
-    Animal <|-- Zebra
-    Animal : +int age
-    Animal : +String gender
-    Animal: +isMammal()
-    Animal: +mate()
-    class Duck{
-        +String beakColor
-        +swim()
-        +quack()
-    }
-    class Fish{
-        -int sizeInFeet
-        -canEat()
-    }
-    class Zebra{
-        +bool is_wild
-        +run()
-    }
-
-```
-
-## Product 8: Prototype test video
-Je hebt een werkend prototype gemaakt om een idee te testen. Omschrijf if je readme wat het idee van de mechanics is geweest wat je wilde testen en laat een korte video van de gameplay test zien. 
-
-[![example test video](https://ucarecdn.com/dbdc3ad0-f375-40ad-8987-9e6451b28b50/)](https://www.youtube.com/watch?v=CzzRML1swF0)
-
-## Product 9: SCRUM planning inschatting 
-
-Je maakt een SCRUM planning en geeft daarbij een inschatting aan elke userstory d.m.v storypoints / zelf te bepalen eenheden. (bijv. Storypoints, Sizes of tijd) aan het begin van een nieuwe sprint update je deze inschatting per userstory. 
-
-Plaats in de readme een link naar je trello en **zorg ervoor dat je deze openbaar maakt**
-
-[Link naar de openbare trello](https://trello.com/b/w60wkKSU/examen-paraphrenia)
-
-## Product 10: Gitflow conventions
-
-Je hebt voor je eigen project in je readme gitflow conventies opgesteld en je hier ook aantoonbaar aan gehouden. 
-
-De gitflow conventions gaan uit van een extra branch Develop naast de "Master"/"Main". Op de main worden alleen stabiele releases gezet.
-
-Verder worden features op een daarvoor bedoelde feature banch ontwikkeld. Ook kun je gebruik maken van een hotfix brancg vanaf develop.
-
-Leg hier uit welke branches jij gaat gebruiken en wat voor namen je hier aan gaat meegeven. Hoe vaak ga je comitten en wat voor commit messages wil je geven?
-
-Meer info over het gebruiken van gitflow [hier](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)

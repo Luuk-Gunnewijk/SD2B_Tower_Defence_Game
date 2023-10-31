@@ -1,31 +1,100 @@
-# SD2B_Tower_Defence_Game
+Viking and Towers is een Tower Defence game waar jij de torens plaast om de vikings tegen te houden van het binnen komen in je fort.
+je plaast de torens met het geld wat je hebt om meer geld te krijgen moet je de vikings vernietigen. De vikings zullen niet alleen op land komen maar ook via de riviers.
 
-                      :Onderzoek:
+![First Pic](TowerDefence_Pics/Pic_01.png)
+![Second Pic](TowerDefence_Pics/Pic_02.png)
 
-Ik heb Kingdom rush gespeelt en tactical war. het groote verschil tussen die games was dat in kingdom rush terwel de waves bezig waren ben je ook dingen aan het doen. in de andere game wat ik heel gaaf vond is dat je de terrein kapot kon maken en daar weer dingen kon plaatsen. het is fijn om te weten vantevoren welke vijanden je gaat zien de komende wave.
+## Product 1: "DRY SRP Scripts op GitHub"
 
-                        :Tower Systeem en Vijanden Systeem:
+in het wave script werk ik met SRP
+[Wave_Script](Tower_Defence_Game/Assets/Scripts/Wave_Scripts/Wave_Script.cs)
 
-Met het tower systeem wou ik dat de torens altijd richten op de vijand die het meest dichtbijst is van het doel en ook dat je in de range bent van de toren. de toren heeft nu een raycast die richt op de vijanden er worden op pijlen geschoten die damage doen op de vijand. de vijanden kunnen meer of minder health hebben wanneer ze spawnen ook kun je hun damage instellen en hun snelheid. je kan nu ook verliezen als de vijanden teveel damage hebben gedaan.
+in de Tower Script werk ik met DRY
+[Tower-Script](Tower_Defence_Game/Assets/Scripts/Tower_Scripts/Towers_Script.cs)
 
-                        :Economy Sytseem:
+## Product 2: "Projectmappen op GitHub"
 
-Met het Economy Systeem heb je geld ook voor elk level heb je starting geld. als je vijanden verslaad dan krijg je meer geld. het geld heb je nodig om je toren te kunnen plaasten. ik wil later ook er voor zorgen dat je je torens kan updgraden
+dit zijn alle mappen die gerbuik in mijn unity voor dit project. Alles is goed neer gezet zodat het duidelijk is waar alles is
+[Project Mappen](Tower_Defence_Game/Assets)
 
-                        :Main Menu en updates:
+## Product 3: Build op Github
 
-het main menu heb ik gemaakt met een level manger de enige manger die ik wil hebben in de tower defence game. voor de naam van de game wacht ik nog even. ik hebn ook een pauze menu gemaakt waarmee je terug kan naar het menu.
+[Vikings And Towers Realse](https://github.com/Luuk-Gunnewijk/SD2B_Tower_Defence_Game/releases/tag/1.0)
 
-                        :PathFinding:
+## Product 4: Game met Sprites(animations) en Textures 
 
-het pathfinding maken was makkelijker dan ik dacht ik heb van tevoren goed uitgeplant hoe ik de pathfinding kan maken. de path finding is zo genmaakt dat je je eiegen paden kan maken als developer. dus ik kan meerde paden maken in alle levels. en ik kan verschillende enemies gebruiken om op andere plaasten te gaan lopen.
+voor mijn game heb ik alle sprites zelf gemaakt in aseprite en allemaal in unity gezet. voor animaties heb ik sprite sheets gebruikt en voor de single foto's heb ik een sprite gebruikt. ik heb ook een texture zodra de enemies damage nemen.
 
-                        :Wave Systeem:
+![Pic_03](TowerDefence_Pics/Pic_03.png)
+![Pic_04](TowerDefence_Pics/Pic_04.png)
+[Texture](Tower_Defence_Game/Assets/Graphics/Materials/WhiteMat.mat)
 
-Voor het wave systeem wou ik twee objecten gebruiken waar de code in zit. in de eerste eentje waar de waves in opsla en de volgende wave start wanneer de current wave klaar is. in het tweede object de wave zelf met alle enemies en hoe snel hun spawnen achter elkaar.
+## Product 5: Issues met debug screenshots op GitHub 
 
-                        :Project afmaken:
+er zijn verschillende manieren om te debugen. 
 
-Voor het project afmaken was het belangrijk om te kijken of er nog bugs waren die moesten woorden op gelost. daarna was het tijd om meer levels temaken. al die levels werden ook geplay test.
-nu nog moest de game nog gebuild worden.
+Als voorbeeld:
 
+in dit script zie je dat ik bijvoorbeeld debug.log gebruik.
+[Main Economy_Script](Tower_Defence_Game/Assets/Scripts/Economy_Scripts/Main_Economy_Script.cs)
+
+ik heb ook draw raycast gerbuikt ook een manier van debugen.
+daarmee kon ik makkelijk zien waar de toren naar aan het richten is.
+
+
+je kan ook manieren gebruiken om de code te stoppen en daar de coden te open om te kijken wat daar gebeurd.
+
+## Product 6: Game design met onderbouwing 
+
+als eerst heb ik een one page gemaakt
+[onePage](https://app.milanote.com/1QEZGp1tOjdeaP/one-page)
+
+ik heb ook zelf bedacht van tevoren hoe ik wil dat de game voelt de twee belangrijkste doelen waren om te zorgen dat de stratigichs begint en daarna chaotich word.
+
+*  **Je game bevat torens die kunnen mikken en schieten op een bewegend doel.** 
+
+mijn torens kunnen schieten op de vijand dee het meest ver op het pad is en in hun range staat. als ze op de vijanden schiten krijgen de vijanden damage als ze raaken
+
+*  **Je game bevat vernietigbare vijanden die 1 of meerderen paden kunnen volgen.**  
+
+mij vijanden volgen een pad die ik makkelijk kan veranderen. als ze het forst aanraken doen ze damage op de main health. als projecttiles hun raken doet dat damage op de vijand verschillende projecttiles doen verschillende strekte damage
+
+*  **Je game bevat een “wave” systeem waarmee er onder bepaalde voorwaarden (tijd/vijanden op) nieuwe waves met vijanden het veld in komen.**
+
+in mijn wave systeem word de volgende wave gespawnt als de vorige wave leeg is. in de wave kan ik de tijd bepalen van de enemies en de padden en welke enemies ik wil spawnen.
+
+*  **Een “health” systeem waarmee je levens kunt verliezen als vijanden hun doel bereiken en zodoende het spel kunt verliezen.** 
+
+als vijanden het fort berijken gaat er health af van de main health is de health nul begint het level opnieuw
+
+*  **Een “resource” systeem waarmee je resources kunt verdienen waarmee je torens kunt kopen en .evt upgraden.**
+
+je begint met geld om torens te kunnen plaasten. als je een toren plaast dan gaat er geld van af. als je enemies dood krijg je er geld bij. je krijgt meer geld van verschillende enemies
+
+*  **Een “upgrade” systeem om je torens te verbeteren.**
+
+ik heb geen upgrade systeem voor de torens
+
+*  **Een “movement prediction” systeem waarmee je kan berekenen waar een toren heen moeten schieten om een bewegend object te kunnen raken. (Moeilijk)**
+
+mijn torens zien welke enemy het verst is op het pad en ook in hun range staat als ze er een zien gaan ze schieten
+
+## Product 7: Class Diagram voor volledige codebase 
+
+![Pic_05](TowerDefence_Pics/Pic_05.png)
+
+## Product 8: Prototype test video
+
+Voor het testen van mij game heb ik gewerkt met andere leerlingen en heb ik een van mijn vrienden gevraagt of hij mij game kon spelen hier is de video van hoe dat ging
+
+[![example test video](https://ucarecdn.com/dbdc3ad0-f375-40ad-8987-9e6451b28b50/)](https://www.youtube.com/watch?v=CzzRML1swF0)
+
+## Product 9: SCRUM planning inschatting 
+
+Voor mijn pellning en mijn one page gebruik ik milanote in plaast van trello. ik heb een plenning gemaakt user story's hoe ik bepaalde code kan aanpakken en een one page hier op gemaakt.
+
+[Milanote](https://app.milanote.com/1QExQw1aKhg17j/bo)
+
+## Product 10: Gitflow conventions
+
+GitFlow is mij zelf helaas niet helemaal gelukt om voor elkaar te krijgen. ik denk wel dat ik het doel er van begrijp maar met gitflow werken is mij niet gelukt op het moment.
