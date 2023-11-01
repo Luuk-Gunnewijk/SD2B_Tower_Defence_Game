@@ -97,4 +97,4 @@ Voor mijn pellning en mijn one page gebruik ik milanote in plaast van trello. ik
 
 ## Product 10: Gitflow conventions
 
-GitFlow is mij zelf helaas niet helemaal gelukt om voor elkaar te krijgen. ik denk wel dat ik het doel er van begrijp maar met gitflow werken is mij niet gelukt op het moment.
+Ik heb met gitflow gewerkt het was zeker handig.
