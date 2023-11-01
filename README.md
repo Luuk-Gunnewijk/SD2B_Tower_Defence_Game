@@ -87,7 +87,7 @@ mijn torens zien welke enemy het verst is op het pad en ook in hun range staat a
 
 Voor het testen van mij game heb ik gewerkt met andere leerlingen en heb ik een van mijn vrienden gevraagt of hij mij game kon spelen hier is de video van hoe dat ging
 
-[![example test video](https://ucarecdn.com/dbdc3ad0-f375-40ad-8987-9e6451b28b50/)](https://www.youtube.com/watch?v=CzzRML1swF0)
+[PlayTest Video](https://www.youtube.com/watch?v=bxJfzeybbpQ)
 
 ## Product 9: SCRUM planning inschatting 
 
